@@ -9,7 +9,8 @@
   "devDependencies": {
     "nuxt": "3.0.0-rc.1",
     "sass": "^1.51.0",
-    "tailwindcss": "^3.0.24"
+    "tailwindcss": "^3.0.24",
+    "unplugin-icons": "^0.14.3"
   },
   "dependencies": {
     "mdue": "^0.1.4"
