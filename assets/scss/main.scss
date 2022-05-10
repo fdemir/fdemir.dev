@@ -3,3 +3,23 @@
 @tailwind utilities;
 
 @import "./themes.scss";
+
+/* Global Class */
+
+.no-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+}
+
+/* FIXME: add some cool page transition */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
