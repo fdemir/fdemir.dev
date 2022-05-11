@@ -2913,11 +2913,6 @@ mdn-data@2.0.14:
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"
   integrity sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==
 
-mdue@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/mdue/-/mdue-0.1.4.tgz#e3901480927b51c2989c5d3a2e098a5caa520f6b"
-  integrity sha512-MjpRercURZK4uNlcvHf9+Igd3/SwIMOEhZl80USDYUDZhNXXo0zl5mcOJKB86HWbN0+DWQ+uIfq85BMKmeKsNw==
-
 memory-fs@^0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/memory-fs/-/memory-fs-0.5.0.tgz#324c01288b88652966d161db77838720845a8e3c"
