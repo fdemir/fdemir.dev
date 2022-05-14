@@ -11,6 +11,9 @@ import Star from "~icons/mdi/star";
         <Star class="text-2xl text-primary" />
       </div>
     </div>
-    <p>Lorem ipsum dolor sit amet consectetur.</p>
+    <p class="h-10 overflow-hidden text-ellipsis block whitespace-nowrap">
+      Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet
+      consectetur.
+    </p>
   </a>
 </template>
