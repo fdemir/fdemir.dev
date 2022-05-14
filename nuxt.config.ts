@@ -9,6 +9,9 @@ export default defineNuxtConfig({
       title: "Furkan Demir",
       viewport: "width=device-width, initial-scale=1",
       charset: "utf-8",
+      htmlAttrs: {
+        lang: "en",
+      },
     },
   },
   vite: {
