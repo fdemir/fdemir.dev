@@ -28,7 +28,7 @@ router.afterEach(() => (navbarVisible.value = false));
 <template>
   <div class="container">
     <div class="py-12 flex justify-between align-middle">
-      <NuxtLink to="/" class="font-semibold text-xl hover:text-primary md:transition-all grid place-items-center">Furkan Demir</NuxtLink>
+      <NuxtLink to="/" class="font-semibold text-2xl hover:text-primary md:transition-all grid place-items-center">Furkan Demir</NuxtLink>
       <div class="z-40 flex items-center">
         <div
           class="md:flex hidden self-center transition-all duration-500 fixed top-1/2 left-0 -translate-y-1/2 md:relative"
