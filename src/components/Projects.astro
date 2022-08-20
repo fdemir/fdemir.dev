@@ -1,0 +1,40 @@
+---
+import ProjectItem from "./ProjectItem.astro";
+import Section from "./Section.astro";
+
+export type Project = {
+  image: string;
+  title: string;
+  description: string
+  link: string
+}
+
+const projects: Project[] = [
+  {
+    image: 'https://png.pngtree.com/thumb_back/fh260/back_our/20190628/ourmid/pngtree-high-saturated-beautiful-romantic-dynamic-watercolor-solid-color-colorful-gradient-background-image_275535.jpg',
+    title: 'React-Redux-Todo-App',
+    description: 'A todo app built with React and Redux',
+    link: 'dsadsa.com'
+  }
+]
+---
+
+<Section title="Projects">
+  <div class="project-row">
+    {projects.map((item) => <ProjectItem data={item} />)}
+  </div>
+</Section>
+
+<style>
+  .project-row {
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    .project-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,35 @@
+---
+  export type InfoItemData = {
+    url?: string
+    from?: string
+    to?: string
+    title: string
+    description: string
+  }
+  const { data } = Astro.props
+---
+
+<div>
+  <h3>
+    <a href={data?.url || ""} target="_blank">
+    {data.title}
+    </a>
+    {(data.from || data.to) && <small>{data.from} {data?.to}</small>}
+  </h3>
+  <p>
+  {data.description}
+  </p>
+</div>
+
+<style>
+  p {
+    color: var(--color-secondary);
+    line-height: 24px;
+    font-size: 1rem;
+  }
+
+  small {
+    margin-left: 10px;
+    color: var(--color-secondary);
+  }
+</style>

@@ -1,0 +1,14 @@
+---
+const { title, children } = Astro.props
+---
+
+<section>
+  <h5>{title}</h5>
+  <slot />
+</section>
+
+<style>
+  section {
+    margin-bottom: 30px;
+  }
+</style>

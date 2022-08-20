@@ -1,0 +1,38 @@
+---
+import InfoItem from "./InfoItem.astro";
+import { InfoItemData } from "./InfoItem.astro";
+import Section from "./Section.astro"
+
+const defcuntProjects: InfoItemData[] = [
+  {
+    title: "Rotenium",
+    description: "E-Commerce platfrom to sell digital assets with various payment methods.",
+    from: "2018",
+    url: "https://image.ibb.co/drnWUe/Rotenium.png"
+  },
+  {
+    title: "AnonimSor",
+    description: "An social media application to ask anonymous questions to others." ,
+    from: "2017"
+  },
+  {
+    title: "CarryWeb",
+    description: "Minecraft server management panel to control users, sell in-game products.",
+    from: "2017",
+    url: "https://i.ibb.co/41MQmbV/image.png"
+  },
+] 
+---
+
+<Section title="Defcunt/Closed">
+  <div class="defcunt-row">
+    {defcuntProjects.map((item) => <InfoItem data={item} />)}
+  </div>
+</Section>
+
+<style>
+.defcunt-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+</style>
