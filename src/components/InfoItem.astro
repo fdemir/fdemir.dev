@@ -10,12 +10,18 @@
 ---
 
 <div>
-  <h3>
-    <a href={data?.url || ""} target="_blank">
-    {data.title}
-    </a>
+  <h4>
+    {
+      data.url 
+      ?
+        <a href={data?.url || ""} target="_blank">
+          {data.title}
+        </a> 
+      : 
+      data.title
+    }
     {(data.from || data.to) && <small>{data.from} {data?.to}</small>}
-  </h3>
+  </h4>
   <p>
   {data.description}
   </p>
