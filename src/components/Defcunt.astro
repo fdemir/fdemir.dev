@@ -34,5 +34,13 @@ const defcuntProjects: InfoItemData[] = [
 .defcunt-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+  
+@media (max-width: 768px) {
+  .defcunt-row {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
