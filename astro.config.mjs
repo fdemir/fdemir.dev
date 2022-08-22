@@ -1,8 +1,15 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 import compress from "astro-compress";
+import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [compress()]
+  site: "https://fdemir.dev",
+  integrations: [
+    robotsTxt({
+      sitemap: false,
+    }),
+    compress(),
+  ],
 });
