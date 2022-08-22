@@ -3,7 +3,7 @@ import InfoItem from "./InfoItem.astro";
 import { InfoItemData } from "./InfoItem.astro";
 import Section from "./Section.astro"
 
-const defcuntProjects: InfoItemData[] = [
+const defunctProjects: InfoItemData[] = [
   {
     title: "Rotenium",
     description: "E-Commerce platfrom to sell digital assets with various payment methods.",
@@ -24,14 +24,14 @@ const defcuntProjects: InfoItemData[] = [
 ] 
 ---
 
-<Section title="Defcunt/Closed">
-  <div class="defcunt-row">
-    {defcuntProjects.map((item) => <InfoItem data={item} />)}
+<Section title="Defunct/Closed">
+  <div class="defunct-row">
+    {defunctProjects.map((item) => <InfoItem data={item} />)}
   </div>
 </Section>
 
 <style>
-.defcunt-row {
+.defunct-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
@@ -39,7 +39,7 @@ const defcuntProjects: InfoItemData[] = [
 
   
 @media (max-width: 768px) {
-  .defcunt-row {
+  .defunct-row {
     grid-template-columns: 1fr;
   }
 }
