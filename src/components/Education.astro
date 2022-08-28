@@ -1,0 +1,28 @@
+---
+import InfoItem, { InfoItemData } from "./InfoItem.astro";
+import Section from "./Section.astro";
+
+const list: InfoItemData[] = [
+  {
+    title: "National Technical University 'Kharkiv Polytechnic Institute'",
+    description: "Bachelor's degree, Software Engineering",
+    from: "2020",
+    to: "~",
+    url: "https://www.kpi.kharkov.ua/eng"
+
+  },
+  {
+    title: "Manavgat Vocational and Technical Anatolian High School",
+    description: "Information Technologies", 
+    url: "https://fdemir.dev",
+    from: "2015",
+    to: "2019"
+  }
+]
+---
+
+<Section title="Education">
+  {list.map((item) => (
+    <InfoItem data={item} />
+  ))}
+</Section>
