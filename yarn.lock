@@ -15,6 +15,16 @@
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-0.23.3.tgz#25af8efda9c92dbc8745341c3a2544caa4c689dc"
   integrity sha512-eBWo0d3DoRDeg2Di1/5YJtOXh5eGFSjJMp1wVoVfoITHR4egdUGgsrDHZTzj0a25M/S9W5S6SpXCyNWcqi8jOA==
 
+"@astrojs/image@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@astrojs/image/-/image-0.5.0.tgz#c1f76ff58fe629fb770232031a726c859990176f"
+  integrity sha512-sXY6jO0BtXSI8vyFmO6nw8QWropA1ur0rY/ZL0Tx3+u83vR3YYKJAEn05CJ4qXeu6yO0am0xbVA3vmf5fU+ImQ==
+  dependencies:
+    image-size "^1.0.2"
+    magic-string "^0.25.9"
+    mime "^3.0.0"
+    sharp "^0.30.6"
+
 "@astrojs/language-server@^0.20.0":
   version "0.20.3"
   resolved "https://registry.yarnpkg.com/@astrojs/language-server/-/language-server-0.20.3.tgz#27b4f88c8e1630b7d38ebda277dd56c3d0aac60b"
@@ -1647,7 +1657,14 @@ ieee754@^1.1.13, ieee754@^1.2.1:
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.2.1.tgz#8eb7a10a63fff25d15a57b001586d177d1b0d352"
   integrity sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==
 
-inherits@^2.0.3, inherits@^2.0.4:
+image-size@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/image-size/-/image-size-1.0.2.tgz#d778b6d0ab75b2737c1556dd631652eb963bc486"
+  integrity sha512-xfOoWjceHntRb3qFCrh5ZFORYH8XCdYpASltMhZ/Q0KZiOwjdE/Yl2QCiWdwD+lygV5bMCvauzgu5PxBX/Yerg==
+  dependencies:
+    queue "6.0.2"
+
+inherits@^2.0.3, inherits@^2.0.4, inherits@~2.0.3:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
@@ -2756,6 +2773,13 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
+queue@6.0.2:
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/queue/-/queue-6.0.2.tgz#b91525283e2315c7553d2efa18d83e76432fed65"
+  integrity sha512-iHZWu+q3IdFZFX36ro/lKBkSvfkztY5Y7HMiPlOUjhupPcG2JMfst2KKEpu5XndviX/3UhFbRngUPNKtgvtZiA==
+  dependencies:
+    inherits "~2.0.3"
+
 rc@^1.2.7:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/rc/-/rc-1.2.8.tgz#cd924bf5200a075b83c188cd6b9e211b7fc0d3ed"
@@ -2978,7 +3002,7 @@ semver@^7.3.5, semver@^7.3.7:
   dependencies:
     lru-cache "^6.0.0"
 
-sharp@0.30.7:
+sharp@0.30.7, sharp@^0.30.6:
   version "0.30.7"
   resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.30.7.tgz#7862bda98804fdd1f0d5659c85e3324b90d94c7c"
   integrity sha512-G+MY2YW33jgflKPTXXptVO28HvNOo9G3j0MybYAHeEmby+QuD2U98dT6ueht9cv/XDqZspSpIhoSW+BAKJ7Hig==
