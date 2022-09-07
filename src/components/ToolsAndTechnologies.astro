@@ -73,6 +73,26 @@ const Skills = [
     gap: 6px;
   }
 
+  @media (max-width: 768px) {
+    .skills-row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .skills-row {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .item {
+      justify-content: center !important;
+    }
+
+    .item span {
+      display: none;
+    }
+  }
+
   .item {
     display: flex;
     flex-direction: row;
