@@ -1,8 +1,10 @@
 ---
 import Header from "../components/Header.astro";
+import "../assets/css/theme.css";
+import Picker from "../features/theme/Picker";
 
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props as Props;
@@ -10,90 +12,86 @@ const { title } = Astro.props as Props;
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="author" content="Furkan Demir" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="description" content="front end developer, comp-sci enthusiast" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<Header />
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Furkan Demir" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="front end developer, comp-sci enthusiast"
+    />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Picker client:idle />
+    <Header />
+    <slot />
+  </body>
 </html>
 <style>
-
-	* {
-		box-sizing: border-box;
-	}
-
-	:root {
-		/* --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
-		--font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
-		--font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem); */
-
-		--font-size-base: 1rem;
-		--font-family-base: system-ui, sans-serif;
-
-		--color-bg: #000;
-		--color-text: #fff;
-		--color-secondary: #dfdfdfcc;
-	  --color-primary: #1DB954;
-	}
-
-
-	html {
-		font-family: system-ui, sans-serif;
-		font-size: var(--font-family-base);
-		color: var(--color-text);
-		background-color: var(--color-bg);
-	}
-
-	body {
-		margin: auto;
-		padding: 0em 1em;
-		max-width: 70ch;
+  * {
+    box-sizing: border-box;
   }
-	
-	:global(h3) {
-		color: var(--color-secondary);
-		font-weight: 800;
-		margin-bottom: 1.5rem;
-		text-transform: uppercase;
-		text-align: left;
-		margin-top: 0;
-		font-size: 1rem;
-	}
 
-	:global(h4) {
-		margin: 0;
-	}
+  :root {
+    --font-size-base: 1rem;
+    --font-family-base: system-ui, sans-serif;
 
-	:global(code) {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+    --color-bg: #000;
+    --color-text: #fff;
+    --color-secondary: #dfdfdfcc;
+    --color-primary: #1db954;
+  }
 
-	:global(small) {
-		color: #f0f0f0;
-		font-weight: 400;
-	}
+  body {
+    margin: auto;
+    padding: 0em 1em;
+    max-width: 70vw;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    position: relative;
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    font-size-adjust: none;
+  }
 
-	:global(a) {
-		color: inherit;
-		text-decoration: none;
-	}
+  :global(h3) {
+    color: var(--color-secondary);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    text-align: left;
+    margin-top: 0;
+    font-size: 1rem;
+  }
 
-	:global(a):hover {
-		color: var(--color-primary);
-	}
+  :global(h4) {
+    margin: 0;
+  }
 
-	:global(ul) {
-		list-style: none;
-		padding-left: 10px;
-	}
+  :global(code) {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
 
+  :global(small) {
+    color: #f0f0f0;
+    font-weight: 400;
+  }
+
+  :global(a) {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  :global(a):hover {
+    color: var(--color-primary);
+  }
+
+  :global(ul) {
+    list-style: none;
+    padding-left: 10px;
+  }
 </style>
