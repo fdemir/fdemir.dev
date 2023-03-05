@@ -48,13 +48,14 @@ const { title } = Astro.props as Props;
   body {
     margin: auto;
     padding: 0em 1em;
-    max-width: 70vw;
+    max-width: 70ch;
     color: var(--color-text);
     background-color: var(--color-bg);
     position: relative;
     font-family: var(--font-family-base);
     font-size: var(--font-size-base);
     font-size-adjust: none;
+    transition: background-color 0.2s ease-in-out;
   }
 
   :global(h3) {
