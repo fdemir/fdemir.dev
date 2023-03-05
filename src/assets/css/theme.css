@@ -1,3 +1,12 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: #faf8f1;
+    --color-text: #3c2a21;
+    --color-secondary: #1a120b;
+    --color-primary: #4e6c50;
+  }
+}
+
 body[data-theme="dark"] {
   --color-bg: #000;
   --color-text: #fff;
@@ -17,7 +26,6 @@ body[data-theme="light"] {
   --color-text: #3c2a21;
   --color-secondary: #1a120b;
   --color-primary: #4e6c50;
-  --font-family-base: none;
 }
 
 body[data-theme="matrix"] {
@@ -25,7 +33,4 @@ body[data-theme="matrix"] {
   --color-text: #0f0;
   --color-secondary: #0f0;
   --color-primary: #0f0;
-  --font-family-base: monospace;
 }
-
-/* data-theme="dark" */
