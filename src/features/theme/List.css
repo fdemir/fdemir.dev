@@ -8,6 +8,8 @@
   height: 40px;
   align-items: center;
   user-select: none;
+  position: absolute;
+  padding: 0;
 }
 
 .theme-list li {
