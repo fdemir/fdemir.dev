@@ -6,5 +6,4 @@ export const theme = atom<ThemeKey>("dark");
 
 theme.listen((value) => {
   document.body.dataset.theme = value;
-  localStorage.setItem("theme", value);
 });
