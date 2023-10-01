@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/solid-js": "^3.0.1",
     "astro": "^3.2.0",
+    "astro-robots-txt": "^1.0.0",
     "nanostores": "^0.9.3",
     "solid-js": "^1.4.3"
   }
