@@ -1,7 +1,7 @@
 import "./Picker.css";
 import List from "./List";
 import rainbow from "./rainbow.svg?raw";
-import { createSignal, onMount } from "solid-js";
+import { createSignal } from "solid-js";
 
 function Picker() {
   const [isOpen, setIsOpen] = createSignal(false);

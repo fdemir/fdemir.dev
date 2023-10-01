@@ -10,7 +10,7 @@ export interface Props {
 const { title } = Astro.props as Props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -25,7 +25,7 @@ const { title } = Astro.props as Props;
     <title>{title}</title>
   </head>
   <body>
-    <Picker client:idle />
+    <Picker client:visible />
     <Header />
     <slot />
   </body>
@@ -55,7 +55,9 @@ const { title } = Astro.props as Props;
     font-family: var(--font-family-base);
     font-size: var(--font-size-base);
     font-size-adjust: none;
-    transition: background-color 0.2s ease-in-out;
+    transition:
+      background-color 0.2s,
+      color 0.2s;
   }
 
   :global(h3) {
@@ -73,8 +75,15 @@ const { title } = Astro.props as Props;
   }
 
   :global(code) {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
   }
 
   :global(small) {
