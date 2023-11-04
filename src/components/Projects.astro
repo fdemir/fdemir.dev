@@ -1,39 +1,48 @@
 ---
-import ProjectItem from "./ProjectItem.astro";
+import InfoItem from "./InfoItem.astro";
+import type { InfoItemData } from "./InfoItem.astro";
 import Section from "./Section.astro";
 
-export type Project = {
-  image: string;
-  title: string;
-  description: string
-  link: string
-}
-
-const projects: Project[] = [
+const defunctProjects: InfoItemData[] = [
   {
-    image: 'https://png.pngtree.com/thumb_back/fh260/back_our/20190628/ourmid/pngtree-high-saturated-beautiful-romantic-dynamic-watercolor-solid-color-colorful-gradient-background-image_275535.jpg',
-    title: 'React-Redux-Todo-App',
-    description: 'A todo app built with React and Redux',
-    link: 'dsadsa.com'
-  }
-]
+    title: "WatchAndChill",
+    description: "Create collaborative watchlist with your friends.",
+    url: "https://watchandchill.in",
+  },
+  {
+    title: "Unhappy-Monster",
+    description:
+      "CLI tool that allows you to analyze customer sentiment in product reviews.",
+    url: "https://watchandchill.in",
+  },
+  {
+    title: "Geyik",
+    description: "Look up origin of Turkish words at your terminal.",
+    url: "https://watchandchill.in",
+  },
+  {
+    title: "Kanalize",
+    description: "AI Powered open-source idea generator.",
+    url: "https://watchandchill.in",
+  },
+];
 ---
 
-<Section title="Projects">
-  <div class="project-row">
-    {projects.map((item) => <ProjectItem data={item} />)}
+<Section title="Active Projects">
+  <div class="defunct-row">
+    {defunctProjects.map((item) => <InfoItem data={item} />)}
   </div>
 </Section>
 
 <style>
-  .project-row {
-    gap: 30px;
+  .defunct-row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 
   @media (max-width: 768px) {
-    .project-row {
+    .defunct-row {
       grid-template-columns: 1fr;
     }
   }
