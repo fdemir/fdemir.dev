@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import "../assets/css/theme.css";
 import Picker from "../features/theme/Picker";
+import Canvas from "../features/paint/Canvas";
 
 export interface Props {
   title: string;
@@ -25,9 +26,12 @@ const { title } = Astro.props as Props;
     <title>{title}</title>
   </head>
   <body>
-    <Picker client:visible />
-    <Header />
-    <slot />
+    <Canvas client:load />
+    <main style="z-index: 1; position: absolute;">
+      <Picker client:visible />
+      <Header />
+      <slot />
+    </main>
   </body>
 </html>
 <style>
@@ -48,7 +52,7 @@ const { title } = Astro.props as Props;
   body {
     margin: auto;
     padding: 0em 1em;
-    max-width: 70ch;
+    max-width: 100ch;
     color: var(--color-text);
     background-color: var(--color-bg);
     position: relative;
