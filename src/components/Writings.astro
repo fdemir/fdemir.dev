@@ -1,18 +1,23 @@
 ---
 import PostItem from "./PostItem.astro";
 import Section from "./Section.astro";
+import Parser from "rss-parser";
 
-const response = await fetch(
-  "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@dmrfurkan"
-);
-const data = await response.json();
-const result =
-  data?.items &&
-  data.items.map((post) => ({
-    title: post.title,
-    link: post.link,
-    pubDate: post.pubDate,
-  }));
+let result;
+try {
+  const parser = new Parser();
+  const data = await parser.parseURL("https://medium.com/feed/@dmrfurkan");
+
+  result =
+    data?.items &&
+    data.items.map((post) => ({
+      title: post.title,
+      link: post.link,
+      pubDate: post.pubDate,
+    }));
+} catch (error) {
+  console.log(error);
+}
 ---
 
 <Section title="Writings">
